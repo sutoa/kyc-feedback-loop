@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  crewai-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/workspace/src
+      - ./requirements.txt:/workspace/requirements.txt
+    command: sleep infinity
