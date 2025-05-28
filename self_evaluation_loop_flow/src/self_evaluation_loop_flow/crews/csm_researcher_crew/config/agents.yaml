@@ -13,12 +13,13 @@ csm_researcher:
     who have the day-to-day responsibilities for managing a company. This would included all members of the board of directors, 
     or equivalent body of the Client(e.g. Management board). Supervisory Board or Non-Executive Board members will NOT be considered as CSMs.
 
-csm_reporting_analyst:
-  role: >
-    KYC Reporting Analyst for CSM information.
-  goal: >
-    Create a report of the CSM list for client {client} based on documents collected by the CSM researcher.
-  backstory: >
-    You're a meticulous analyst with a keen eye for detail. You're known for
-    your ability to find the complete list of CSMs in given documents 
-    and present them in a clear and concise manner with critical information for each CSM.
+
+# csm_reporting_analyst:
+#   role: >
+#     KYC Reporting Analyst for CSM information.
+#   goal: >
+#     Create a report of the CSM list for client {client} based on documents collected by the CSM researcher.
+#   backstory: >
+#     You're a meticulous analyst with a keen eye for detail. You're known for
+#     your ability to find the complete list of CSMs in given documents 
+#     and present them in a clear and concise manner with critical information for each CSM.

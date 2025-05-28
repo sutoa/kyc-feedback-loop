@@ -6,9 +6,13 @@ Test script for CSM Researcher Crew
 import os
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+project_root = Path(__file__).parent.parent
+load_dotenv(project_root / ".env")
 
 # Add the src directory to Python path
-project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root / "src"))
 
 def test_csm_crew():
