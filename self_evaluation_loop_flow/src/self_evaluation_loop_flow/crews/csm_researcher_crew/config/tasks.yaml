@@ -9,7 +9,7 @@ collect_csm_documents:
     - other public data sources
     - other sources you can find on the internet
   expected_output: >
-    A list of CSMs for client {client} with the following information:
+    list 1 - CSMs for client {client} with the following information:
     - Name
     - Email
     - Phone
@@ -17,6 +17,16 @@ collect_csm_documents:
     - Department
     - Company
     - origin of the CSM information, such as name of the document with page number, or the source of the information
+    - reason why the person is a CSM
+    list 2 - non-CSM senior officers for client {client} with the following information:
+    - Name
+    - Email
+    - Phone
+    - Title
+    - Department
+    - Company
+    - origin of the CSM information, such as name of the document with page number, or the source of the information
+    - reason why the person is NOT a CSM
   agent: csm_researcher
 
 # report_csm_list:

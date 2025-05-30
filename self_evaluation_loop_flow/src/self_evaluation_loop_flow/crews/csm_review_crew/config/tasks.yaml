@@ -1,17 +1,27 @@
-research_task:
-  description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
 
-reporting_task:
+csm_review_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Review the list of CSMs and non-CSM senior officers for client {client}, produced by the CSM researcher.
+    Make sure the reasons included for a person being considered as CSM and non-CSM is consistent with the definition of CSMs.
+    
+    Below is the definition of CSMs:
+    CSMs, or Client Senior Managers, are Natural Persons, or Non-Natural Persons, who hold specific executive powers and 
+    have permission to act on the entity's behalf. Generally, they are individuals at the highest level of organizational management,
+    who have the day-to-day responsibilities for managing a company. This would included all members of the board of directors, 
+    or equivalent body of the Client(e.g. Management board). Supervisory Board or Non-Executive Board members will NOT be considered as CSMs.
+    
+    If you find any inconsistencies in the reasons for CSM and non-CSM labeling that requires correction, the list is considered invalid.
+    Please provide corrections with explanation on what is wrong. 
+
+    Your final response must include the following information:
+    - Valid: True or False
+    - Feedback: A list of corrections to the list of CSMs and non-CSM senior officers for client {client} produced by the CSM researcher 
+    with clear explanation.
+
+    CSM and non-CSM lists from the CSM researcher for you to review:
+    {csm_lists}
+    
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Pass: True/False
+    Feedback: commentary here if failed
+  agent: csm_reviewer
